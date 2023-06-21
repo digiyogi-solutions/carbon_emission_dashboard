@@ -3,4 +3,4 @@
 
 ### Readme in-progress
 
-![image](/assets/app_screenshot_01.png)
+![image](/app/assets/app_screenshot_01.png)
