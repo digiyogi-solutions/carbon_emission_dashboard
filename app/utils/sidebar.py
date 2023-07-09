@@ -29,12 +29,11 @@ def get_sidebar():
                                         icon=get_icon(icon="tabler:gauge"),
                                         rightSection=get_icon(icon="tabler-chevron-right"),
                                         children=[
-                                            dmc.NavLink(label="Site Summary", href="/popular_sites/site_summary/", icon=get_icon(icon="mdi:facebook")),
+                                            dmc.NavLink(label="Site summary", href="/popular_sites/site_summary/", icon=get_icon(icon="mdi:facebook")),
                                             dmc.NavLink(label="Geography analysis", icon=get_icon(icon="mdi:twitter")),
-                                            dmc.NavLink(label="Instagram", icon=get_icon(icon="mdi:instagram")),
-                                            dmc.NavLink(label="LinkedIn", icon=get_icon(icon="mdi:linkedin")),
-                                            dmc.NavLink(label="YouTube", icon=get_icon(icon="mdi:youtube")),
-
+                                            dmc.NavLink(label="Tabular view", icon=get_icon(icon="mdi:instagram")),
+                                            # dmc.NavLink(label="LinkedIn", icon=get_icon(icon="mdi:linkedin")),
+                                            # dmc.NavLink(label="YouTube", icon=get_icon(icon="mdi:youtube")),
 
                                         ]
                                 ),

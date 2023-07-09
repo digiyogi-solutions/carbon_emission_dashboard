@@ -7,6 +7,10 @@ import dash_mantine_components as dmc
 from utils import sidebar, header, drawer
 from dash import Output, Input, State, html
 
+# Loading environment variables
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Dash(__name__, 
            use_pages=True,
@@ -64,4 +68,15 @@ def drawer_dem(n_clicks):
         
 
 if __name__ == '__main__':
-	app.run_server(debug=True, port=8051)
+        if os.getenv('ENV') == 'DEV':
+            app.run_server(
+                host=os.getenv('DASH_HOST_DEV'),
+                port=os.getenv('DASH_PORT_DEV'), 
+                debug=os.getenv('DASH_DEBUG_DEV'),
+                )
+        else:
+            app.run_server(
+                host=os.getenv('DASH_HOST_PROD'),
+                port=os.getenv('DASH_PORT_PROD'), 
+                debug=os.getenv('DASH_DEBUG_PROD'),
+                )
