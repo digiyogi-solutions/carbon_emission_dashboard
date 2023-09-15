@@ -74,9 +74,15 @@ if __name__ == '__main__':
                 port=os.getenv('DASH_PORT_DEV'), 
                 debug=os.getenv('DASH_DEBUG_DEV'),
                 )
-        else:
+        elif os.getenv('ENV') == 'PROD':
             app.run_server(
                 host=os.getenv('DASH_HOST_PROD'),
                 port=os.getenv('DASH_PORT_PROD'), 
                 debug=os.getenv('DASH_DEBUG_PROD'),
+                )
+        else:
+            app.run_server(
+                host='127.0.0.1',
+                port=8051, 
+                debug=True,
                 )
